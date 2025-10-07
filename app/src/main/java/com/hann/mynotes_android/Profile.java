@@ -51,7 +51,7 @@ public class Profile extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent goToCreateNote = new Intent(Profile.this, NotePages.class);
                         String message = usernameDisplay.getText().toString(); // Mengambil username dari kolom username
-                        goToCreateNote.putExtra(EXTRA_MESSAGE_USERNAME, message); // Mengirim username ke home page
+                        goToCreateNote.putExtra(EXTRA_MESSAGE_USERNAME, message); // Mengirim username ke Notes Page
                         startActivity(goToCreateNote);
                         finish();
                     }

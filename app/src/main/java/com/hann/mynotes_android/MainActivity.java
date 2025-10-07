@@ -26,14 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
         Button loginbtn = findViewById(R.id.login);
         username = findViewById(R.id.username); // Inisialisasi EditText (USERNAME)
-
-        Intent intent = getIntent(); //Menerima intent dari semua activity
     }
 
     public void loginEvent(View view) {
         Intent intent = new Intent(this, HomePage.class); // Membuat intent agar berpindah ke HomePage
         String message = username.getText().toString(); // Mengambil username dari kolom username
-        intent.putExtra(EXTRA_MESSAGE_USERNAME, message); // Mengirim username ke semua activity
+        intent.putExtra(EXTRA_MESSAGE_USERNAME, message); // Mengirim username ke Home Page
         startActivity(intent); // Memulai intent
         finish(); // Menutup activity agar tidak bisa kembali ke login page
     }
